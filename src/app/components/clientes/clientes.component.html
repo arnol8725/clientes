@@ -1,0 +1,29 @@
+<h1>
+
+    {{titulo}}</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Email</th>
+            <th scope="col">Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of listaClientes">
+            <th>{{cliente.id}}</th>
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.apellido}}</td>
+            <td>{{cliente.email}}</td>
+            <td>{{cliente.createAt | date:'dd-MM-yyyy'}}</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<pre>
+  {{ listaClientes | json}}
+</pre>
